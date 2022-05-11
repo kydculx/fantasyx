@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,23 +31,50 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final List<String> _products =
+      List.generate(10, (index) => "Card ${index.toString()}");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Fantasy X',
-              style: Theme.of(context).textTheme.headline4,
+      body: SizedBox(width: 200, child: renderList()),
+    );
+  }
+
+  Widget renderList() {
+    return ReorderableListView.builder(
+      itemCount: _products.length,
+      itemBuilder: (context, index) {
+        final String productName = _products[index];
+
+        return Card(
+          key: ValueKey(productName),
+          color: Colors.amberAccent,
+          elevation: 10,
+          margin: const EdgeInsets.all(10),
+          child: ListTile(
+            contentPadding: const EdgeInsets.all(25),
+            title: Text(
+              productName,
+              style: const TextStyle(fontSize: 18),
             ),
-          ],
-        ),
-      ),
+            // trailing: const Icon(Icons.drag_handle),
+            onTap: () {},
+          ),
+        );
+      },
+      onReorder: (oldIndex, newIndex) {
+        setState(() {
+          if (newIndex > oldIndex) {
+            newIndex = newIndex - 1;
+          }
+          final element = _products.removeAt(oldIndex);
+          _products.insert(newIndex, element);
+        });
+      },
     );
   }
 }
