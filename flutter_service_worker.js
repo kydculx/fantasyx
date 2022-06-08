@@ -4,9 +4,9 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "73193f7ccf26feaa63df013ed3745fa1",
-"index.html": "57f33d9edc10ca9065f00f60f0ca3029",
-"/": "57f33d9edc10ca9065f00f60f0ca3029",
-"main.dart.js": "fdf6d4f7afaebb7524c662ec944b5685",
+"index.html": "bbd34790065267db4aaa83637c1407d7",
+"/": "bbd34790065267db4aaa83637c1407d7",
+"main.dart.js": "e861889db698447e383a40c1f9e69c22",
 "flutter.js": "0816e65a103ba8ba51b174eeeeb2cb67",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
@@ -23,7 +23,7 @@ const RESOURCES = {
 "assets/images/card_17.png": "d0773662a573371aca73e0b27cbf56da",
 "assets/images/card_16.png": "2641f8d8eed82542fb5cc36354318b90",
 "assets/images/popup_02.png": "7752814adf210b6bb881c3786219fef9",
-"assets/images/guide_banner.png": "243cdc2c3d9a7e1000056085d7f208ed",
+"assets/images/guide_banner.png": "7618c57f65678d778aeb7d97cd459514",
 "assets/images/profile_queen_6.png": "ba5c54be45af3d04d0f028f865aed1fc",
 "assets/images/deck_icon_9.png": "17a4ea592823af3499962621a7935bdd",
 "assets/images/profile_queen_2.png": "ae3675bf79b12377f8fba548676616b1",
